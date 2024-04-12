@@ -1,6 +1,6 @@
 import mayflower.*;
 
-public class Player extends Actor implements fighter {
+public class Player extends Actor implements Fighter {
     private int health;
     public Player() {
         health = 100; // Set initial health
