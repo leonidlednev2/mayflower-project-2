@@ -1,13 +1,22 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=Enemy
 dependency1.to=Attack
 dependency1.type=UsesDependency
 dependency2.from=MyMayflower
 dependency2.to=TitleScreen
+=======
+dependency1.from=Project2Runner
+dependency1.to=MyMayflower
+dependency1.type=UsesDependency
+dependency2.from=Player
+dependency2.to=Attack
+>>>>>>> 88b9fbcdd220f5d4b42120840827d95961c0d1e5
 dependency2.type=UsesDependency
 dependency3.from=GameWorld
 dependency3.to=Player
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency4.from=GameWorld
 dependency4.to=Enemy
 dependency4.type=UsesDependency
@@ -16,19 +25,34 @@ dependency5.to=MyMayflower
 dependency5.type=UsesDependency
 dependency6.from=Player
 dependency6.to=Attack
+=======
+dependency4.from=Enemy
+dependency4.to=Attack
+dependency4.type=UsesDependency
+dependency5.from=GameWorld
+dependency5.to=Player
+dependency5.type=UsesDependency
+dependency6.from=GameWorld
+dependency6.to=Enemy
+>>>>>>> 88b9fbcdd220f5d4b42120840827d95961c0d1e5
 dependency6.type=UsesDependency
-editor.fx.0.height=739
+editor.fx.0.height=725
 editor.fx.0.width=816
+<<<<<<< HEAD
 editor.fx.0.x=552
 editor.fx.0.y=98
+=======
+editor.fx.0.x=931
+editor.fx.0.y=187
+>>>>>>> 88b9fbcdd220f5d4b42120840827d95961c0d1e5
 objectbench.height=157
 objectbench.width=760
 package.divider.horizontal=0.6
 package.divider.vertical=0.672
 package.editor.height=329
 package.editor.width=670
-package.editor.x=100
-package.editor.y=100
+package.editor.x=68
+package.editor.y=113
 package.frame.height=600
 package.frame.width=800
 package.numDependencies=6

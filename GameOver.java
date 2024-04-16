@@ -1,33 +1,21 @@
-
+import mayflower.*;
 /**
- * Write a description of class GameOver here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * The GameOver class
+ * It displays when one side's health reaches 0
  */
-public class GameOver
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
+public class GameOver extends World {
     /**
-     * Constructor for objects of class GameOver
+     * Constructor
+     * Sets background to `gameOver.png`
      */
-    public GameOver()
-    {
-        // initialise instance variables
-        x = 0;
+    public GameOver() {
+        setBackground("img/gameOver.png");
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * The act() method should be blank?
      */
-    public int sampleMethod(int y)
-    {
+    public void act() {
         // put your code here
-        return x + y;
     }
 }
