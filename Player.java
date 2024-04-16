@@ -6,12 +6,9 @@ public class Player extends Actor implements Fighter {
         health = 100; // Set initial health
     }
     
-    @Override
-    public void act()
-    {
+    public void act() {
         // implement act
     }
-    
 
     public void attack() {
         World world = getWorld();

@@ -1,6 +1,4 @@
-
-
-public interface fighter
+public interface Fighter
 {
     void attack();
     void takeDamage(int damage);
