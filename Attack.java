@@ -1,14 +1,12 @@
 import mayflower.*;
 
 public class Attack extends Actor {
-
     private static final int SPEED = 5; // Adjust as needed
-
+    
     public Attack() {
         setImage("path_to_attack_image.png"); // Set the image for the attack
     }
 
-    @Override
     public void act() {
         // Move the attack horizontally
         setLocation(getX() + SPEED, getY());

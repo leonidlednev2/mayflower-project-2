@@ -2,13 +2,12 @@ import mayflower.*;
 
 public class Enemy extends Actor implements Fighter {
     private int health;
+    
     public Enemy() {
         health = 100; // Set initial health
     }
     
-    @Override
-    public void act()
-    {
+    public void act() {
         // implement act
     }
     public void gameOver()
@@ -24,9 +23,7 @@ public class Enemy extends Actor implements Fighter {
         int y = getY();
         
         world.addObject(attack, x, y);
-        
     }
-
 
     public void takeDamage(int damage) {
         health -= damage;

@@ -47,7 +47,6 @@ public class Player extends Actor implements Fighter {
         }
     }
 
-    @Override
     public void act()
     {
         if (isMovingUp) {
@@ -72,7 +71,6 @@ public class Player extends Actor implements Fighter {
         Attack attack = new Attack();
         
         int x = getX() + getImage().getWidth() + 10;
-        
         int y = getY();
         
         world.addObject(attack, x, y);
@@ -97,3 +95,4 @@ public class Player extends Actor implements Fighter {
 
 
   
+
