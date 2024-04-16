@@ -1,6 +1,6 @@
 import mayflower.*;
 
-public class Enemy extends Actor implements fighter {
+public class Enemy extends Actor implements Fighter {
     private int health;
     public Enemy() {
         health = 100; // Set initial health
@@ -11,7 +11,9 @@ public class Enemy extends Actor implements fighter {
     {
         // implement act
     }
-    
+    public void gameOver()
+    {
+    }
 
     public void attack() {
         World world = getWorld();
@@ -30,6 +32,7 @@ public class Enemy extends Actor implements fighter {
         health -= damage;
         if (health <= 0) {
             getWorld().removeObject(this);
+            gameOver();
         }
     }
     
