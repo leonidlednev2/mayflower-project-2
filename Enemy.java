@@ -16,7 +16,7 @@ public class Enemy extends Actor implements Fighter {
 
     public void attack() {
         World world = getWorld();
-        Attack attack = new Attack();
+        Attack attack = new Attack(1);
         
         int x = getX() + getImage().getWidth() + 10;
         

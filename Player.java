@@ -69,7 +69,7 @@ public class Player extends Actor implements Fighter {
 
     public void attack() {
         World world = getWorld();
-        Attack attack = new Attack();
+        Attack attack = new Attack(0);
         
         int x = getX() + getImage().getWidth() + 10;
         int y = getY();

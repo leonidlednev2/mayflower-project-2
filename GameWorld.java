@@ -1,13 +1,13 @@
 import mayflower.*;
 
 public class GameWorld extends World {
-    private Actor f1;
-    private Actor f2;
+    private Player p;
+    private Enemy e;
     
 
     public GameWorld() {
-        f1 = new Player();
-        f2 = new Enemy();
+        p = new Player();
+        e = new Enemy();
         setBackground("img/SF_bg.jpg");
     }
 
