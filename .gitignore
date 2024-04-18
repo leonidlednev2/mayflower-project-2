@@ -27,3 +27,4 @@ replay_pid*
 # Other
 .vscode/
 lib/
+Thumbs.db
