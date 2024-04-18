@@ -1,4 +1,4 @@
-public interface Fighter
+ public interface Fighter
 {
     void attack();
     

@@ -2,18 +2,19 @@ import mayflower.*;
 
 public class Player extends Actor implements Fighter {
     private int health;
-    private static final int SPEED = 5; 
+    private int SPEED = 5; 
     private boolean isMovingUp;
-    private boolean isMovingDown;
+    private int walkCounter;
     private boolean isMovingLeft;
     private boolean isMovingRight;
-    
+               
     public Player() {
         health = 100;
+        setImage("stickman1.png");
         isMovingUp = false;
-        isMovingDown = false;
         isMovingLeft = false;
         isMovingRight = false;
+        walkCounter = 0;
     }
 
     public void onKeyDown(int keyCode) {
@@ -21,9 +22,7 @@ public class Player extends Actor implements Fighter {
         if (keyCode == Keyboard.KEY_UP) {
             isMovingUp = true;
         }
-        if (keyCode == Keyboard.KEY_DOWN) {
-            isMovingDown = true;
-        }
+     
         if (keyCode == Keyboard.KEY_LEFT) {
             isMovingLeft = true;
         }
@@ -36,24 +35,20 @@ public class Player extends Actor implements Fighter {
         if (keyCode == Keyboard.KEY_UP) {
             isMovingUp = false;
         }
-        if (keyCode == Keyboard.KEY_DOWN) {
-            isMovingDown = false;
-        }
+      
         if (keyCode == Keyboard.KEY_LEFT) {
             isMovingLeft = false;
         }
         if (keyCode == Keyboard.KEY_RIGHT) {
             isMovingRight = false;
         }
-    }
+    }   
 
+    @Override
     public void act()
     {
         if (isMovingUp) {
             setLocation(getX(), getY() - SPEED);
-        }
-        if (isMovingDown) {
-            setLocation(getX(), getY() + SPEED);
         }
         if (isMovingLeft) {
             setLocation(getX() - SPEED, getY());
@@ -61,6 +56,16 @@ public class Player extends Actor implements Fighter {
         if (isMovingRight) {
             setLocation(getX() + SPEED, getY());
         }
+        walkCounter++;
+        
+        if(getImage().equals("stickman1.png")){
+            setImage("stickman walk.png");
+            
+        }
+        else{
+         setImage("stickman1.png");   
+        }
+        
     }
     public void gameOver()
     {
@@ -95,4 +100,5 @@ public class Player extends Actor implements Fighter {
 
 
   
+
 
