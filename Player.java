@@ -62,6 +62,7 @@ public class Player extends Actor implements Fighter {
             setLocation(getX() + SPEED, getY());
         }
     }
+    
     public void gameOver() {
         Mayflower.setWorld(new GameOver());
     }
