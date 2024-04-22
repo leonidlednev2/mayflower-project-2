@@ -14,6 +14,7 @@ public class Enemy extends Actor implements Fighter {
     private static final int SPEED = 5; 
     public Enemy() {
         health = 100; // Set initial health
+        setImage("stickman_walk.png");
     }
     
     public void onKeyDown(int keyCode) {
