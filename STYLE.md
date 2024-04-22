@@ -14,7 +14,11 @@ public class SomeClass {
     }
 
     public void someMethod(Object arg) {
-        doSomething();
+        if (something.equals(somethingElse)) {
+            doSomething();
+        } else {
+            doSomethingElse();
+        }
     }
 
     public Object getVar1() {
