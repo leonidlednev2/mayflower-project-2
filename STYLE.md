@@ -3,9 +3,10 @@
 Indent: 4 spaces
 
 ```java
-class SomeClass {
+public class SomeClass {
     private Object iVar1;
     protected Object iVar2;
+    private static final Object VAL3 = val3;
     
     public SomeClass() {
         iVar1 = val1;
