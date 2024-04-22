@@ -1,5 +1,10 @@
 import mayflower.*;
-
+/**
+ * The `Enemy` class
+ * 
+ * This class is used to control the other character with the WASD keys.
+ * It is almost an exact copy of the `Player` class
+ */
 public class Enemy extends Actor implements Fighter {
     private int health;
     private boolean isMovingUp;
