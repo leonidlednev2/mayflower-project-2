@@ -10,3 +10,10 @@ Dependencies:
 
 * Mayflower 3
 * BlueJ
+
+To run:
+
+1. Open `package.bluej` in BlueJ
+2. Add the library `mayflower3.jar`
+3. Compile the project
+4. Run the `Project2Runner` class
