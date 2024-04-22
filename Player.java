@@ -1,8 +1,13 @@
 import mayflower.*;
 
+/**
+ * The `Player` class
+ * 
+ * This class is used to control the player character with the arrow keys
+ */
 public class Player extends Actor implements Fighter {
     private int health;
-    private int SPEED = 5; 
+    private final int SPEED = 5; //CHANGEME
     private boolean isMovingUp;
     private int walkCounter;
     private boolean isMovingLeft;
@@ -44,9 +49,7 @@ public class Player extends Actor implements Fighter {
         }
     }   
 
-    @Override
-    public void act()
-    {
+    public void act() {
         if (isMovingUp) {
             setLocation(getX(), getY() - SPEED);
         }
@@ -58,12 +61,11 @@ public class Player extends Actor implements Fighter {
         }
         walkCounter++;
         
-        if(getImage().equals("stickman1.png")){
-            setImage("stickman walk.png");
+        if (getImage().equals(new MayflowerImage("img/stickman1.png"))){
+            setImage("img/stickman walk.png");
             
-        }
-        else{
-         setImage("stickman1.png");   
+        } else {
+            setImage("img/stickman1.png");   
         }
         
     }
@@ -96,10 +98,3 @@ public class Player extends Actor implements Fighter {
         setLocation(x,y);
     }
 }
-
-    
-
-
-  
-
-
