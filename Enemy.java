@@ -31,7 +31,7 @@ public class Enemy extends Actor implements Fighter {
             isMovingRight = true;
         }
     }
-     public void onKeyUp(int keyCode) {
+    public void onKeyUp(int keyCode) {
         // Handle key release events
         if (keyCode == Keyboard.KEY_UP) {
             isMovingUp = false;
@@ -47,9 +47,7 @@ public class Enemy extends Actor implements Fighter {
         }
     }
 
-
-    public void act()
-    {
+    public void act(){
         if (isMovingUp) {
             setLocation(getX(), getY() - SPEED);
         }
@@ -63,6 +61,7 @@ public class Enemy extends Actor implements Fighter {
             setLocation(getX() + SPEED, getY());
         }
     }
+
     public void gameOver() {
         Mayflower.setWorld(new GameOver());
     }

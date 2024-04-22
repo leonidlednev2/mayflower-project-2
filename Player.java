@@ -35,7 +35,7 @@ public class Player extends Actor implements Fighter {
             isMovingRight = true;
         }
     }
-     public void onKeyUp(int keyCode) {
+    public void onKeyUp(int keyCode) {
         // Handle key release events
         if (keyCode == Keyboard.KEY_UP) {
             isMovingUp = false;
