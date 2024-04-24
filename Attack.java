@@ -16,7 +16,11 @@ public class Attack extends Actor {
 
     public void act() {
         // Move the attack horizontally
-        setLocation(getX() + SPEED, getY());
+        if (who == 0) {
+            setLocation(getX() + SPEED, getY());
+        } else {
+            setLocation(getX() - SPEED, getY());
+        }
 
         // Check if the attack is off-screen and remove it if it is
         if (getX() > getWorld().getWidth() || getX() < 0 - getWidth()) {
