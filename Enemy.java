@@ -34,6 +34,7 @@ public class Enemy extends Actor implements Fighter {
         } else {
             isMovingRight = false;
         }
+        
         if (isMovingUp) {
             setLocation(getX(), getY() - SPEED);
         }

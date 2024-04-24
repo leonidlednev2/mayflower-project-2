@@ -8,6 +8,7 @@ public class Attack extends Actor {
     private static final int SPEED = 5; // Adjust as needed
     private int who; // 0 is Player, 1 is Enemy
     private static final int DAMAGE = 10;
+
     public Attack(int who) {
         setImage("path_to_attack_image.png"); // TODO: Set the image for the attack
         this.who = who;
