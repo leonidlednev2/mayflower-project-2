@@ -14,41 +14,26 @@ public class Enemy extends Actor implements Fighter {
     private static final int SPEED = 5; 
     public Enemy() {
         health = 100; // Set initial health
-        setImage("stickman_walk.png");
-    }
-    
-    public void onKeyDown(int keyCode) {
-        // Handle key press events
-        if (keyCode == Keyboard.KEY_UP) {
-            isMovingUp = true;
-        }
-        if (keyCode == Keyboard.KEY_DOWN) {
-            isMovingDown = true;
-        }
-        if (keyCode == Keyboard.KEY_LEFT) {
-            isMovingLeft = true;
-        }
-        if (keyCode == Keyboard.KEY_RIGHT) {
-            isMovingRight = true;
-        }
-    }
-    public void onKeyUp(int keyCode) {
-        // Handle key release events
-        if (keyCode == Keyboard.KEY_UP) {
-            isMovingUp = false;
-        }
-        if (keyCode == Keyboard.KEY_DOWN) {
-            isMovingDown = false;
-        }
-        if (keyCode == Keyboard.KEY_LEFT) {
-            isMovingLeft = false;
-        }
-        if (keyCode == Keyboard.KEY_RIGHT) {
-            isMovingRight = false;
-        }
+        setImage("img/stickman_walk.png");
     }
 
     public void act(){
+        if (Mayflower.isKeyDown(Keyboard.KEY_W)) {
+            isMovingUp = true;
+        } else {
+            isMovingUp = false;
+        }
+
+        if (Mayflower.isKeyDown(Keyboard.KEY_A)) {
+            isMovingLeft = true;
+        } else {
+            isMovingLeft = false;
+        }
+        if (Mayflower.isKeyDown(Keyboard.KEY_D)) {
+            isMovingRight = true;
+        } else {
+            isMovingRight = false;
+        }
         if (isMovingUp) {
             setLocation(getX(), getY() - SPEED);
         }
@@ -70,15 +55,14 @@ public class Enemy extends Actor implements Fighter {
     public void attack() {
         World world = getWorld();
         Attack attack = new Attack(1);
-        
-        int x = getX() + getImage().getWidth() + 10;
-        
-        int y = getY();
-        
-        world.addObject(attack, x, y);
-        
-    }
 
+        int x = getX() + getImage().getWidth() + 10;
+
+        int y = getY();
+
+        world.addObject(attack, x, y);
+
+    }
 
     public void takeDamage(int damage) {
         health -= damage;
@@ -87,7 +71,7 @@ public class Enemy extends Actor implements Fighter {
             gameOver();
         }
     }
-    
+
     public void move(int x, int y) {
         setLocation(x,y);
     }
