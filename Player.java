@@ -9,7 +9,6 @@ public class Player extends Actor implements Fighter {
     private int health;
     private final int SPEED = 5; //CHANGEME
     private boolean isMovingUp;
-    private int walkCounter;
     private boolean isMovingLeft;
     private boolean isMovingRight;
 
@@ -19,7 +18,6 @@ public class Player extends Actor implements Fighter {
         isMovingUp = false;
         isMovingLeft = false;
         isMovingRight = false;
-        walkCounter = 0;
     }
 
     public void act() {
@@ -48,7 +46,6 @@ public class Player extends Actor implements Fighter {
         if (isMovingRight) {
             setLocation(getX() + SPEED, getY());
         }
-        walkCounter++;
 
         if (getImage().
 
