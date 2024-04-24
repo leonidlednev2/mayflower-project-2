@@ -1,6 +1,7 @@
 import mayflower.*;
 /**
  * The GameOver class
+ * 
  * It displays when one side's health reaches 0
  */
 public class GameOver extends World {
@@ -16,6 +17,6 @@ public class GameOver extends World {
      * The act() method should be blank?
      */
     public void act() {
-        // put your code here
+        
     }
 }
