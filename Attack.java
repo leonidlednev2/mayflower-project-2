@@ -10,7 +10,7 @@ public class Attack extends Actor {
     private static final int DAMAGE = 10;
 
     public Attack(int who) {
-        setImage("path_to_attack_image.png"); // TODO: Set the image for the attack
+        setImage("img/attack.png"); // TODO: Set the image for the attack
         this.who = who;
     }
 
