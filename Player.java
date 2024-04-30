@@ -11,6 +11,7 @@ public class Player extends Actor implements Fighter {
     private boolean isMovingUp;
     private boolean isMovingLeft;
     private boolean isMovingRight;
+    private boolean isMovingDown;
 
     public Player() {
         health = 100;
@@ -18,6 +19,7 @@ public class Player extends Actor implements Fighter {
         isMovingUp = false;
         isMovingLeft = false;
         isMovingRight = false;
+        isMovingDown = false;
     }
 
     public void act() {
@@ -32,11 +34,19 @@ public class Player extends Actor implements Fighter {
         } else {
             isMovingLeft = false;
         }
+
         if (Mayflower.isKeyDown(Keyboard.KEY_RIGHT)) {
             isMovingRight = true;
         } else {
             isMovingRight = false;
         }
+
+        if (Mayflower.isKeyDown(Keyboard.KEY_DOWN)) {
+            isMovingDown = true;
+        } else {
+            isMovingDown = false;
+        }
+
         if (isMovingUp) {
             setLocation(getX(), getY() - SPEED);
         }
@@ -46,16 +56,14 @@ public class Player extends Actor implements Fighter {
         if (isMovingRight) {
             setLocation(getX() + SPEED, getY());
         }
+        if (isMovingDown) {
+            setLocation(getX(), getY() + SPEED);
+        }
 
-        if (getImage().
-
-        equals(new 
-
-            MayflowerImage("img/stickman1.png"))){
+        if (getImage().equals(new MayflowerImage("img/stickman1.png"))) {
             setImage("img/stickman walk.png");
-
         } else {
-            setImage("img/stickman1.png");   
+            setImage("img/stickman1.png");
         }
 
     }

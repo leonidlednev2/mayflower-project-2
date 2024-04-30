@@ -29,10 +29,17 @@ public class Enemy extends Actor implements Fighter {
         } else {
             isMovingLeft = false;
         }
+
         if (Mayflower.isKeyDown(Keyboard.KEY_D)) {
             isMovingRight = true;
         } else {
             isMovingRight = false;
+        }
+
+        if (Mayflower.isKeyDown(Keyboard.KEY_S)) {
+            isMovingDown = true;
+        } else {
+            isMovingDown = false;
         }
         
         if (isMovingUp) {
