@@ -60,10 +60,10 @@ public class Player extends Actor implements Fighter {
             setLocation(getX(), getY() + SPEED);
         }
 
-        if (getImage().equals(new MayflowerImage("img/stickman1.png"))) {
-            setImage("img/stickman walk.png");
+        if (getImage().equals(new MayflowerImage("img/stickman1b.png"))) {
+            setImage("img/stickman1a.png");
         } else {
-            setImage("img/stickman1.png");
+            setImage("img/stickman1b.png");
         }
 
     }

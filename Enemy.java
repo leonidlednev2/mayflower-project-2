@@ -14,7 +14,7 @@ public class Enemy extends Actor implements Fighter {
     private static final int SPEED = 5; 
     public Enemy() {
         health = 100; // Set initial health
-        setImage("img/stickman_walk.png");
+        setImage("img/stickman1a.png");
     }
 
     public void act(){
