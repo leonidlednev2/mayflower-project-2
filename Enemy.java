@@ -41,18 +41,22 @@ public class Enemy extends Actor implements Fighter {
         } else {
             isMovingDown = false;
         }
+
+        if (Mayflower.isKeyDown(Keyboard.KEY_SPACE)) {
+            attack();
+        }
         
-        if (isMovingUp) {
+        if (isMovingUp && getY() > 0) {
             setLocation(getX(), getY() - SPEED);
         }
-        if (isMovingDown) {
-            setLocation(getX(), getY() + SPEED);
+        if (isMovingRight && getX() + getWidth() < getWorld().getWidth() / 2) {
+            setLocation(getX() + SPEED, getY());
         }
-        if (isMovingLeft) {
+        if (isMovingLeft && getX() > 0) {
             setLocation(getX() - SPEED, getY());
         }
-        if (isMovingRight) {
-            setLocation(getX() + SPEED, getY());
+        if (isMovingDown && getY() + getHeight() < getWorld().getHeight()) {
+            setLocation(getX(), getY() + SPEED);
         }
     }
 
@@ -63,13 +67,9 @@ public class Enemy extends Actor implements Fighter {
     public void attack() {
         World world = getWorld();
         Attack attack = new Attack(1);
-
         int x = getX() + getImage().getWidth() + 10;
-
-        int y = getY();
-
+        int y = getY() + getHeight() / 2;
         world.addObject(attack, x, y);
-
     }
 
     public void takeDamage(int damage) {

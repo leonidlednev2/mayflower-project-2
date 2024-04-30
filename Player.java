@@ -15,7 +15,7 @@ public class Player extends Actor implements Fighter {
 
     public Player() {
         health = 100;
-        setImage("img/stickman1.png");
+        setImage("img/stickman1a.png");
         isMovingUp = false;
         isMovingLeft = false;
         isMovingRight = false;
@@ -47,16 +47,24 @@ public class Player extends Actor implements Fighter {
             isMovingDown = false;
         }
 
-        if (isMovingUp) {
+        if (Mayflower.isKeyDown(Keyboard.KEY_NUMPAD0)) {
+            try {
+                attack();
+            } catch (Exception e) {
+                System.err.println(e.getStackTrace());
+            }
+        }
+
+        if (isMovingUp && getY() > 0) {
             setLocation(getX(), getY() - SPEED);
         }
-        if (isMovingLeft) {
+        if (isMovingLeft && getX() > getWorld().getWidth() / 2) {
             setLocation(getX() - SPEED, getY());
         }
-        if (isMovingRight) {
+        if (isMovingRight && getX() + getWidth() < getWorld().getWidth()) {
             setLocation(getX() + SPEED, getY());
         }
-        if (isMovingDown) {
+        if (isMovingDown && getY() + getHeight() < getWorld().getHeight()) {
             setLocation(getX(), getY() + SPEED);
         }
 
@@ -74,13 +82,10 @@ public class Player extends Actor implements Fighter {
 
     public void attack() {
         World world = getWorld();
-        Attack attack = new Attack(0);
-
-        int x = getX() + getImage().getWidth() + 10;
-        int y = getY();
-
+        Attack attack = new Attack(1);
+        int x = getX() - 10;
+        int y = getY() + getHeight() / 2;
         world.addObject(attack, x, y);
-
     }
 
     public void takeDamage(int damage) {

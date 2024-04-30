@@ -1,5 +1,5 @@
 public interface Fighter {
-    void attack();
+    void attack() throws InterruptedException;
     
     void takeDamage(int damage);
     

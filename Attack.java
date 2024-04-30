@@ -10,16 +10,21 @@ public class Attack extends Actor {
     private static final int DAMAGE = 10;
 
     public Attack(int who) {
-        setImage("img/attack.png"); // TODO: Set the image for the attack
-        this.who = who;
+        if (who == 1) {
+            setImage("img/attack1.png");
+        } else {
+            MayflowerImage img = new MayflowerImage("img/attack1.png");
+            img.mirrorHorizontally();
+            setImage(img);
+        }
     }
 
     public void act() {
         // Move the attack horizontally
         if (who == 0) {
-            setLocation(getX() + SPEED, getY());
-        } else {
             setLocation(getX() - SPEED, getY());
+        } else {
+            setLocation(getX() + SPEED, getY());
         }
 
         // Check if the attack is off-screen and remove it if it is
