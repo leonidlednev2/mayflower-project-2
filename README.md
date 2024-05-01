@@ -8,12 +8,15 @@ Description: Stick fighting game using Mayflower, trees, and stacks
 
 Dependencies:
 
-* Mayflower 3
-* BlueJ
+* [Mayflower 3](https://drive.google.com/file/d/1v3p9eyCkCe-o6-MnKyXHi3scswR2XIRC/view)
 
 To run:
 
-1. Open `package.bluej` in BlueJ
-2. Add the library `mayflower3.jar`
-3. Compile the project
-4. Run the `Project2Runner` class
+1. Add the `Mayflower3.jar` reference library
+2. Run the `Project2Runner` class
+
+Controls and gameplay:
+
+* Player 1 uses WASD and Space
+* Player 2 uses the arrow keys and NUMPAD_0 (enable numlock)
+* Each player has a limited ammount of health

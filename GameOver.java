@@ -9,8 +9,9 @@ public class GameOver extends World {
      * Constructor
      * Sets background to `gameOver.png`
      */
-    public GameOver() {
-        setBackground("img/gameOver.png");
+    public GameOver(String winner) {
+        showText("Game over!", 10, 10, Color.BLACK);
+        showText(winner + " wins", 10, 50, Color.BLACK);
     }
 
     /**
