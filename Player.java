@@ -48,11 +48,7 @@ public class Player extends Actor implements Fighter {
         }
 
         if (Mayflower.isKeyDown(Keyboard.KEY_NUMPAD0)) {
-            try {
-                attack();
-            } catch (Exception e) {
-                System.err.println(e.getStackTrace());
-            }
+            attack();
         }
 
         if (isMovingUp && getY() > 0) {
@@ -77,13 +73,13 @@ public class Player extends Actor implements Fighter {
     }
 
     public void gameOver() {
-        Mayflower.setWorld(new GameOver("Player 2"));
+        Mayflower.setWorld(new GameOver("Player 1"));
     }
 
     public void attack() {
         World world = getWorld();
         Attack attack = new Attack(1);
-        int x = getX() - 10;
+        int x = getX() - attack.getWidth();
         int y = getY() + getHeight() / 2;
         world.addObject(attack, x, y);
     }

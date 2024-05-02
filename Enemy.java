@@ -61,13 +61,13 @@ public class Enemy extends Actor implements Fighter {
     }
 
     public void gameOver() {
-        Mayflower.setWorld(new GameOver("Player 1"));
+        Mayflower.setWorld(new GameOver("Player 2"));
     }
 
     public void attack() {
         World world = getWorld();
-        Attack attack = new Attack(1);
-        int x = getX() + getImage().getWidth() + 10;
+        Attack attack = new Attack(0);
+        int x = getX() + getImage().getWidth() + 20;
         int y = getY() + getHeight() / 2;
         world.addObject(attack, x, y);
     }
