@@ -4,7 +4,7 @@ Authors: [@leonidlednev2](https://github.com/leonidlednev2), [@anikethsri](https
 
 Purpose: Demonstrate the skills learned in CSIII
 
-Description: Stick fighting game using Mayflower, trees, and stacks
+Description: Stick fighting game using Mayflower
 
 Dependencies:
 
